@@ -7,7 +7,7 @@ from applications.misc.constants import BASE_DIR
 
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=False, static_folder=BASE_DIR + '/static/')
-
+    app.template_folder = '../templates'
     # app.register_error_handler(400, bad_request)
     # app.register_error_handler(401, unauthorized)
     # app.register_error_handler(404, not_found)
@@ -33,5 +33,9 @@ def create_app(test_config=None):
 
     return app
 
+
 app = create_app()
 
+from applications.controllers.public import PublicView
+
+PublicView.register(app, route_prefix= "/")
