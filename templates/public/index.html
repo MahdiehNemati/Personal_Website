@@ -15,20 +15,20 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='calvin/css/vendor.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='calvin/css/styles.css')}}">
 
     <!-- script
     ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script defer src="js/fontawesome/all.min.js"></script>
+    <script src="{{ url_for('static', filename='calvin/js/modernizr.js')}}"></script>
+    <script defer src="{{ url_for('static', filename='calvin/js/fontawesome/all.min.js')}}"></script>
 
     <!-- favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='calvin/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='calvin/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='calvin/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{ url_for('static', filename='calvin/site.webmanifest')}}">
 
 </head>
 
@@ -48,7 +48,7 @@
 
         <div class="s-header__logo">
             <a class="logo" href="index.html">
-                <img src="images/logo.svg" alt="Homepage">
+                <img src="{{url_for('static',filename= 'calvin/images/logo.svg')}}" alt="Homepage">
             </a>
         </div>
 
@@ -259,8 +259,8 @@
     
                         <div class="entry__thumb">
                             <a href="single-standard.html" class="thumb-link">
-                                <img src="images/thumbs/masonry/macbook-600.jpg" 
-                                     srcset="images/thumbs/masonry/macbook-600.jpg 1x, images/thumbs/masonry/macbook-1200.jpg 2x" alt="">
+                                <img src="{{url_for('static',filename= 'calvin/images/thumbs/masonry/macbook-600.jpg')}}"
+                                     srcset="{{url_for('static',filename= 'calvin/images/thumbs/masonry/macbook-600.jpg')}} 1x, {{url_for('static', filename='calvin/images/thumbs/masonry/macbook-1200.jpg')}} 2x" alt="">
                             </a>
                         </div> <!-- end entry__thumb -->
     
@@ -294,8 +294,8 @@
         
                         <div class="entry__thumb">
                             <a href="single-standard.html" class="thumb-link">
-                                <img src="images/thumbs/masonry/woodcraft-600.jpg" 
-                                     srcset="images/thumbs/masonry/woodcraft-600.jpg 1x, images/thumbs/masonry/woodcraft-1200.jpg 2x" alt="">
+                                <img src="{{url_for('static', filename= 'calvin/images/thumbs/masonry/woodcraft-600.jpg')}}"
+                                     srcset="{{url_for('static', filename='calvin/images/thumbs/masonry/woodcraft-600.jpg')}} 1x, {{url_for('static', filename='calvin/images/thumbs/masonry/woodcraft-1200.jpg')}} 2x" alt="">
                             </a>
                         </div> <!-- end entry__thumb -->
         
@@ -329,8 +329,8 @@
     
                         <div class="entry__thumb">
                             <a href="single-standard.html" class="thumb-link">
-                                <img src="images/thumbs/masonry/tulips-600.jpg" 
-                                     srcset="images/thumbs/masonry/tulips-600.jpg 1x, images/thumbs/masonry/tulips-1200.jpg 2x" alt="">
+                                <img src="{{url_for('static', filename='calvin/images/thumbs/masonry/tulips-600.jpg')}}"
+                                     srcset="{{url_for('static', filename='calvin/images/thumbs/masonry/tulips-600.jpg')}} 1x, {{url_for('static', filename= 'calvin/images/thumbs/masonry/tulips-1200.jpg')}} 2x" alt="">
                             </a>
                         </div>  <!-- end entry__thumb -->
     
@@ -363,8 +363,8 @@
         
                         <div class="entry__thumb">
                             <a href="single-standard.html" class="thumb-link">
-                                <img src="images/thumbs/masonry/grayscale-600.jpg" 
-                                     srcset="images/thumbs/masonry/grayscale-600.jpg 1x, images/thumbs/masonry/grayscale-1200.jpg 2x" alt="">
+                                <img src="{{url_for('static', filename= 'calvin/images/thumbs/masonry/grayscale-600.jpg')}}"
+                                     srcset="{{url_for('static', filename= 'calvin/images/thumbs/masonry/grayscale-600.jpg')}} 1x, {{url_for('static', filename='calvin/images/thumbs/masonry/grayscale-1200.jpg')}} 2x" alt="">
                             </a>
                         </div> <!-- end entry__thumb -->
         
@@ -805,9 +805,9 @@
 
     <!-- Java Script
     ================================================== -->
-    <script src="js/jquery-3.5.0.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{{url_for('static',filename='calvin/js/jquery-3.5.0.min.js')}}"></script>
+    <script src="{{url_for('static',filename='calvin/js/plugins.js')}}"></script>
+    <script src="{{url_for('static',filename='calvin/js/main.js')}}"></script>
 
 </body>
 

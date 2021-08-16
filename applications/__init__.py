@@ -6,7 +6,7 @@ from applications.misc.constants import BASE_DIR
 
 
 def create_app(test_config=None):
-    app = Flask(__name__, instance_relative_config=False, static_folder=BASE_DIR + '/static/')
+    app = Flask(__name__, instance_relative_config=False, static_folder=BASE_DIR + '/statics/')
     app.template_folder = '../templates'
     # app.register_error_handler(400, bad_request)
     # app.register_error_handler(401, unauthorized)
