@@ -129,7 +129,7 @@
 
             <div class="s-hero__slide">
 
-                <div class="s-hero__slide-bg" style="background-image: url('images/slide1-bg-3000.jpg');"></div>
+                <div class="s-hero__slide-bg" style="background-image: url({{url_for('static', filename= 'calvin/images/slide1-bg-3000.jpg')}});"></div>
 
                 <div class="row s-hero__slide-content animate-this">
                     <div class="column">
@@ -157,7 +157,7 @@
 
             <div class="s-hero__slide">
 
-                <div class="s-hero__slide-bg" style="background-image: url('images/slide2-bg-3000.jpg');"></div>
+                <div class="s-hero__slide-bg" style="background-image: url({{url_for('static', filename= 'calvin/images/slide2-bg-3000.jpg')}});"></div>
 
                 <div class="row s-hero__slide-content animate-this">
                     <div class="column">
@@ -184,7 +184,7 @@
 
             <div class="s-hero__slide"">
 
-                <div class="s-hero__slide-bg" style="background-image: url('images/slide3-bg-3000.jpg');"></div>
+                <div class="s-hero__slide-bg" style="background-image: url({{url_for('static', filename= 'calvin/images/slide3-bg-3000.jpg')}});"></div>
 
                 <div class="row s-hero__slide-content animate-this">
                     <div class="column">
@@ -398,7 +398,7 @@
                         <div class="entry__thumb">
                             <a href="single-standard.html" class="thumb-link">
                                 <img src="images/thumbs/masonry/walk-600.jpg" 
-                                     srcset="images/thumbs/masonry/walk-600.jpg 1x, images/thumbs/masonry/walk-1200.jpg 2x" alt="">
+                                     srcset="{{url_for('static', filename= 'calvin/images/thumbs/masonry/walk-600.jpg')}} 1x, {{url_for('static', filename= 'calvin/images/thumbs/masonry/walk-1200.jpg')}} 2x" alt="">
                             </a>
                         </div> <!-- end entry__thumb -->
     
@@ -434,7 +434,7 @@
                         <div class="entry__thumb">
                             <a href="single-standard.html" class="thumb-link">
                                 <img src="images/thumbs/masonry/jump-600.jpg" 
-                                     srcset="images/thumbs/masonry/jump-600.jpg 1x, images/thumbs/masonry/jump-1200.jpg 2x" alt="">
+                                     srcset="{{url_for('static', filename= 'calvin/images/thumbs/masonry/jump-600.jpg')}} 1x, {{url_for('static', filename= 'calvin/images/thumbs/masonry/jump-1200.jpg')}} 2x" alt="">
                             </a>
                         </div> <!-- end entry__thumb -->
             
@@ -469,7 +469,7 @@
                         <div class="entry__thumb">
                             <a href="single-standard.html" class="thumb-link">
                                 <img src="images/thumbs/masonry/real-600.jpg" 
-                                     srcset="images/thumbs/masonry/real-600.jpg 1x, images/thumbs/masonry/real-1200.jpg 2x" alt="">
+                                     srcset="{{url_for('static', filename= 'calvin/images/thumbs/masonry/real-600.jpg')}} 1x, {{url_for('static', filename= 'calvin/images/thumbs/masonry/real-1200.jpg')}} 2x" alt="">
                             </a>
                         </div> <!-- end entry__thumb -->
     
@@ -504,7 +504,7 @@
                         <div class="entry__thumb">
                             <a href="single-standard.html" class="thumb-link">
                                 <img src="images/thumbs/masonry/lamp-600.jpg" 
-                                     srcset="images/thumbs/masonry/lamp-600.jpg 1x, images/thumbs/masonry/lamp-1200.jpg 2x" alt="">
+                                     srcset="{{url_for('static', filename= 'calvin/images/thumbs/masonry/lamp-600.jpg')}} 1x, {{url_for('static', filename= 'calvin/images/thumbs/masonry/lamp-1200.jpg')}} 2x" alt="">
                             </a>
                         </div> <!-- end entry__thumb -->
     
@@ -539,7 +539,7 @@
                         <div class="entry__thumb">
                             <a href="single-standard.html" class="thumb-link">
                                 <img src="images/thumbs/masonry/clock-600.jpg" 
-                                     srcset="images/thumbs/masonry/clock-600.jpg 1x, images/thumbs/masonry/clock-1200.jpg 2x" alt="">
+                                     srcset="{{url_for('static', filename= 'calvin/images/thumbs/masonry/clock-600.jpg')}} 1x, {{url_for('static', filename= 'calvin/images/thumbs/masonry/clock-1200.jpg')}} 2x" alt="">
                             </a>
                         </div> <!-- end entry__thumb -->
     
@@ -574,7 +574,7 @@
                         <div class="entry__thumb">
                             <a href="single-standard.html" class="thumb-link">
                                 <img src="images/thumbs/masonry/beetle-600.jpg" 
-                                     srcset="images/thumbs/masonry/beetle-600.jpg 1x, images/thumbs/masonry/beetle-1200.jpg 2x" alt="">
+                                     srcset="{{url_for('static', filename='calvin/images/thumbs/masonry/beetle-600.jpg')}} 1x, {{url_for('static', filename= 'calvin/images/thumbs/masonry/beetle-1200.jpg')}} 2x" alt="">
                             </a>
                         </div> <!-- end entry__thumb -->
     
@@ -608,7 +608,7 @@
                         <div class="entry__thumb">
                             <a href="single-standard.html" class="thumb-link">
                                 <img src="images/thumbs/masonry/phone-and-keyboard-600.jpg" 
-                                     srcset="images/thumbs/masonry/phone-and-keyboard-600.jpg 1x, images/thumbs/masonry/phone-and-keyboard-1200.jpg 2x" alt="">
+                                     srcset="{{url_for('static', filename= 'calvin/images/thumbs/masonry/phone-and-keyboard-600.jpg')}} 1x, filename= 'calvin/images/thumbs/masonry/phone-and-keyboard-1200.jpg')}} 2x" alt="">
                             </a>
                         </div> <!-- end entry__thumb -->
     
@@ -642,7 +642,7 @@
                         <div class="entry__thumb">
                             <a href="single-standard.html" class="thumb-link">
                                 <img src="images/thumbs/masonry/seashore-600.jpg" 
-                                     srcset="images/thumbs/masonry/seashore-600.jpg 1x, images/thumbs/masonry/seashore-1200.jpg 2x" alt="">
+                                     srcset="{{url_for('static', filename= 'calvin/images/thumbs/masonry/seashore-600.jpg')}} 1x, {{url_for('static', filename= 'calvin/images/thumbs/masonry/seashore-1200.jpg')}} 2x" alt="">
                             </a>
                         </div> <!-- end entry__thumb -->
     
