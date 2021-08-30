@@ -74,6 +74,14 @@
                         </ul>
                     </li>
                     <li class="has-children">
+                        <a href="#0" title="">Github Repos</a>
+                        <ul class="sub-menu">
+                            {%for i in github_data%}
+                            <li><a href="https://github.com/{{i['full_name']}}">{{i.name}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="has-children">
                         <a href="#0" title="">Blog</a>
                         <ul class="sub-menu">
                             <li><a href="single-video.html">Video Post</a></li>
@@ -216,8 +224,8 @@
             <p>Follow</p>
             <span></span>
             <ul class="s-hero__social-icons">
-                <li><a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                <li><a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/mohidotpy"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="#0"><i class="fab fa-github" aria-hidden="true"></i></a></li>
                 <li><a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                 <li><a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i></a></li>
             </ul>
@@ -513,7 +521,7 @@
                                 <h1 class="entry__title"><a href="single-standard.html">Symmetry In Modern Design.</a></h1>
                                 
                                 <div class="entry__meta">
-                                    <span class="byline"">By:
+                                    <span class="byline">By:
                                         <span class='author'>
                                             <a href="#0">Kakakshi Hatake</a>
                                     </span>
