@@ -37,5 +37,7 @@ def create_app(test_config=None):
 app = create_app()
 
 from applications.controllers.public import PublicView
+from applications.controllers.github_projects import GithubProjectsView
 
-PublicView.register(app, route_prefix= "/")
+PublicView.register(app, route_prefix="/")
+GithubProjectsView.register(app, route_prefix="/github_projects")
