@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Calvin</title>
+    <title>Maddy Nemati</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -69,6 +69,15 @@
                         <li><a href="category.html">Data Visualization</a></li>
                         <li><a href="category.html">Business Intelligence</a></li>
                         <li><a href="category.html">Web Development</a></li>
+                    </ul>
+                </li>
+                <li class="has-children">
+                    <a href="#0" title="">Github Projects</a>
+                    <ul class="sub-menu">
+                        {% for i in github_data%}
+
+                        <li><a href="{{i.html_url}}">{{i.name}}</a></li>
+                        {% endfor %}
                     </ul>
                 </li>
                 <li><a href="about.html" title="">Publications</a></li>
@@ -137,7 +146,7 @@
                                 <a href="#0">Design</a>
                             </span>
                         <span class="byline">
-                                Posted by 
+                                Posted by
                                 <span class="author">
                                     <a href="#0">Jonathan Doe</a>
                                 </span>
@@ -165,7 +174,7 @@
                                 <a href="#0">Work</a>
                             </span>
                         <span class="byline">
-                                Posted by 
+                                Posted by
                                 <span class="author">
                                     <a href="#0">Juan Dela Cruz</a>
                                 </span>
@@ -195,7 +204,7 @@
                                 <a href="#0">Lifestyle</a>
                             </span>
                     <span class="byline">
-                                Posted by 
+                                Posted by
                                 <span class="author">
                                     <a href="#0">Jane Doe</a>
                                 </span>
@@ -320,7 +329,7 @@
                                     </span>
                                 </span>
                                 <span class="cat-links">
-                                        <a href="#">Design</a> 
+                                        <a href="#">Design</a>
                                         <a href="#">Photography</a>
                                     </span>
                             </div>
@@ -435,7 +444,7 @@
                                     </span>
                                 </span>
                                 <span class="cat-links">
-                                        <a href="#">Work</a> 
+                                        <a href="#">Work</a>
                                         <a href="#">Lifestyle</a>
                                     </span>
                             </div>
@@ -514,7 +523,7 @@
                                     </span>
                                 </span>
                                 <span class="cat-links">
-                                        <a href="#">Travel</a> 
+                                        <a href="#">Travel</a>
                                         <a href="#">Vacation</a>
                                     </span>
                             </div>
@@ -552,7 +561,7 @@
                                     </span>
                                 </span>
                                 <span class="cat-links">
-                                        <a href="#">Design</a> 
+                                        <a href="#">Design</a>
                                         <a href="#">Photography</a>
                                     </span>
                             </div>
@@ -706,7 +715,7 @@
                                     </span>
                                 </span>
                                 <span class="cat-links">
-                                        <a href="#">Health</a> 
+                                        <a href="#">Health</a>
                                         <a href="#">Vacation</a>
                                     </span>
                             </div>
