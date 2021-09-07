@@ -1,6 +1,8 @@
 import os
 
 from flask import Flask
+from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy
 
 from applications.misc.constants import BASE_DIR
 
@@ -17,6 +19,7 @@ def create_app(test_config=None):
     # admin panel configs
     app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+
     #
     # if test_config is None:
     #     # load the instance config, if it exists, when not testing
@@ -35,9 +38,18 @@ def create_app(test_config=None):
 
 
 app = create_app()
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
+
+
+from applications.Vaccination.models import VaccinationModel
 
 from applications.controllers.public import PublicView
 from applications.controllers.github_projects import GithubProjectsView
+from applications.controllers.vaccination import VaccinationView
+
 
 PublicView.register(app, route_prefix="/")
+VaccinationView.register(app, route_prefix="/vaccination")
 GithubProjectsView.register(app, route_prefix="/github_projects")
+
