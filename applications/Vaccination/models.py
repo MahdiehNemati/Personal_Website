@@ -2,6 +2,7 @@ from datetime import datetime
 
 from applications import db
 
+
 class VaccinationModel(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     country = db.Column(db.String)
