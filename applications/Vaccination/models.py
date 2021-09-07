@@ -20,3 +20,6 @@ class VaccinationModel(db.Model):
         db.session.commit()
 
         return instance
+
+class User(db.Model):
+    id= db.Column(db.Integer, primary_key=True)
