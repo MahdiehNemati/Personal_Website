@@ -24,3 +24,6 @@ class VaccinationModel(db.Model):
 
 class User(db.Model):
     id= db.Column(db.Integer, primary_key=True)
+
+class Car(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
