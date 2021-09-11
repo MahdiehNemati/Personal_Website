@@ -1,6 +1,8 @@
 import os
 
+from docutils.core import publish_parts
 from flask import Flask
+from flask_flatpages import FlatPages
 
 from applications.misc.constants import BASE_DIR
 
@@ -17,6 +19,9 @@ def create_app(test_config=None):
     # admin panel configs
     app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+
+    app.config['FLATPAGES_HTML_RENDERER'] = rst_renderer
+
     #
     # if test_config is None:
     #     # load the instance config, if it exists, when not testing
@@ -34,10 +39,19 @@ def create_app(test_config=None):
     return app
 
 
+def rst_renderer(text):
+    parts = publish_parts(source=text, writer_name='html')
+    return parts['fragment']
+
+
 app = create_app()
+
+pages = FlatPages(app)
+
 
 from applications.controllers.public import PublicView
 from applications.controllers.github_projects import GithubProjectsView
 
 PublicView.register(app, route_prefix="/")
-GithubProjectsView.register(app, route_prefix="/github_projects")
+GithubProjectsView.register(app, route_prefix="/github_projects", name="github")
+
