@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-
+    {% block existing_link %}
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
@@ -16,6 +16,7 @@
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="{{url_for('static', filename='calvin/css/vendor.css') }}">
+    <link rel="stylesheet" href="{{url_for('static', filename='calvin/css/custom.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='calvin/css/styles.css')}}">
 
     <!-- script
@@ -29,7 +30,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='calvin/favicon-32x32.png')}}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='calvin/favicon-16x16.png')}}">
     <link rel="manifest" href="{{ url_for('static', filename='calvin/site.webmanifest')}}">
+    {% endblock %}
 
+    {% block extra_link %}
+    {% endblock %}
     <style>
         .s-content.s-content--no-top-padding {
             display: none;
@@ -247,6 +251,10 @@
 <script src="{{url_for('static',filename='calvin/js/jquery-3.5.0.min.js')}}"></script>
 <script src="{{url_for('static',filename='calvin/js/plugins.js')}}"></script>
 <script src="{{url_for('static',filename='calvin/js/main.js')}}"></script>
+
+{% block extra_script %}
+{% endblock %}
+
 
 </body>
 
