@@ -24,5 +24,14 @@ class GithubProjectsView(FlaskView):
         else:
             fork_numbers = 0
 
+        github_repo_branches = "https://api.github.com/repos/MahdiehNemati/{path}/branches".format(path=path)
+        github_branches = requests.get(github_repo_branches)
+        if 200 <= github_branches.status_code < 300:
+            github_branches = github_branches.json()
+            branch_numbers = len(github_branches)
+        else:
+            branch_numbers = 0
+
         return render_template("/github_projects/index.html", path=path, star_numbers=star_numbers,
-                               fork_numbers=fork_numbers)
+                               fork_numbers=fork_numbers,
+                               branch_numbers=branch_numbers)
