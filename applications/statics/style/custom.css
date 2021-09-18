@@ -1,0 +1,12 @@
+header.s-header {
+    background: gray;
+}
+
+.s-content.s-content--no-top-padding {
+    display: none;
+}
+
+
+svg.svg-inline--fa {
+    font-size: 50px;
+}

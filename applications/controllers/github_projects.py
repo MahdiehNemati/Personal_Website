@@ -8,6 +8,10 @@ class GithubProjectsView(FlaskView):
 
     @route('/<path>')
     def project_detail(self, path):
+        github_url = "https://api.github.com/users/MahdiehNemati/repos"
+        github_data = requests.get(github_url)
+        github_data = github_data.json()
+
         github_repo_stars = "https://api.github.com/repos/MahdiehNemati/{path}/stargazers".format(path=path)
         github_stars = requests.get(github_repo_stars)
         if 200 <= github_stars.status_code < 300:
@@ -32,6 +36,6 @@ class GithubProjectsView(FlaskView):
         else:
             branch_numbers = 0
 
-        return render_template("/github_projects/index.html", path=path, star_numbers=star_numbers,
+        return render_template("/github_projects/detail.html", path=path, star_numbers=star_numbers,
                                fork_numbers=fork_numbers,
-                               branch_numbers=branch_numbers)
+                               branch_numbers=branch_numbers, github_data=github_data)
