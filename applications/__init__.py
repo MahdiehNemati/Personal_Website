@@ -51,7 +51,9 @@ pages = FlatPages(app)
 
 from applications.controllers.public import PublicView
 from applications.controllers.github_projects import GithubProjectsView
+from applications.controllers.visualization import VisualizationView
 
 PublicView.register(app, route_prefix="/")
 GithubProjectsView.register(app, route_prefix="/github_projects", name="github")
+VisualizationView.register(app, route_prefix="/visualization", name="visualization")
 
