@@ -18,7 +18,7 @@ def create_app(test_config=None):
 
     # admin panel configs
     app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mssql+pyodbc://DESKTOP-0F249ES\SQLEXPRESS/seqlserver2?driver=ODBC+Driver+17+for+SQL+Server'
 
     #
     # if test_config is None:
