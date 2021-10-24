@@ -33,7 +33,7 @@ class VisualizationView(FlaskView):
 
         return render_template('visualization/lists.html', file_name_list=file_name_list)
 
-    @route('/csv_detail/<path_name>')
-    def csv_detail(self, path_name):
+    @route('/csv_detail/<file_name>')
+    def csv_detail(self, file_name):
 
-        return render_template('visualization/csv_detail.html', pepsi=path_name)
+        return render_template('visualization/csv_detail.html', pepsi=file_name)

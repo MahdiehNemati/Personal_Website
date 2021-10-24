@@ -9,7 +9,7 @@
 {% block body %}
 <div class="project-title" id="middle-body">
     {% for i in file_name_list%}
-        <a href="{{ url_for('VisualizationView:csv_detail', path_name = i) }}"><h1>{{i}}</h1></a>
+    <a href="{{url_for('VisualizationView:csv_detail', file_name= i)}}"><h1>{{i}}</h1></a>
     {%endfor%}
 </div>
 
